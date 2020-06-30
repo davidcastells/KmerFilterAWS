@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<openclProject:OpenCLProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:openclProject="http://www.xilinx.com/openclproject" name="kmer_filter" location="/home/centos/workspace/kmer_filter" platform="/home/centos/src/project_data/aws-fpga/Vitis/aws_platform/xilinx_aws-vu9p-f1_shell-v04261818_201920_2/xilinx_aws-vu9p-f1_shell-v04261818_201920_2.xpfm" platformUID="xilinx:aws-vu9p-f1:shell-v04261818:201920.2(custom)" systemProject="kmer_filter_system" sysConfig="config0_0" cpu="x86_0" os="linux">
+  <configuration name="Emulation-SW" id="com.xilinx.accelerated.config.sw_emu.596457796">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true">
+      <binaryContainers name="binary_container_1">
+        <kernels name="kmer" sourceFile="src/kmer.v16.cl">
+          <computeUnits name="kmer_1" slr=""/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true">
+      <binaryContainers name="binary_container_1">
+        <kernels name="kmer" sourceFile="src/kmer.v16.cl"/>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.accelerated.config.hw_emu.1606219471">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="kmer" sourceFile="src/kmer.v16.cl">
+          <computeUnits name="kmer_1" slr=""/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" kernelDebug="true" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="kmer" sourceFile="src/kmer.v16.cl">
+          <computeUnits name="kmer_1" slr=""/>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.accelerated.config.hw.2121491066">
+    <configBuildOptions xsi:type="openclProject:OpenCLOptions" target="hw">
+      <binaryContainers name="binary_container_1" traceMemory="FIFO:64K">
+        <kernels name="kmer" sourceFile="src/kmer.v16.cl">
+          <computeUnits name="kmer_1" slr="">
+            <args name="pattern" master="true" memory="" profileAll="true"/>
+            <args name="patternIdx" master="true" memory="" profileAll="true"/>
+            <args name="text" master="true" memory="" profileAll="true"/>
+            <args name="textIdx" master="true" memory="" profileAll="true"/>
+            <args name="workload" master="true" memory="" profileAll="true"/>
+            <args name="workloadLength" memory=""/>
+          </computeUnits>
+          <args name="pattern" master="true"/>
+          <args name="patternIdx" master="true"/>
+          <args name="text" master="true"/>
+          <args name="textIdx" master="true"/>
+          <args name="workload" master="true"/>
+          <args name="workloadLength"/>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="openclProject:OpenCLOptions" target="hw">
+      <binaryContainers name="binary_container_1" traceMemory="FIFO:64K">
+        <kernels name="kmer" sourceFile="src/kmer.v16.cl">
+          <computeUnits name="kmer_1" slr="">
+            <args name="pattern" master="true" memory="" profileAll="true"/>
+            <args name="patternIdx" master="true" memory="" profileAll="true"/>
+            <args name="text" master="true" memory="" profileAll="true"/>
+            <args name="textIdx" master="true" memory="" profileAll="true"/>
+            <args name="workload" master="true" memory="" profileAll="true"/>
+            <args name="workloadLength" memory=""/>
+          </computeUnits>
+          <args name="pattern" master="true"/>
+          <args name="patternIdx" master="true"/>
+          <args name="text" master="true"/>
+          <args name="textIdx" master="true"/>
+          <args name="workload" master="true"/>
+          <args name="workloadLength"/>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+</openclProject:OpenCLProject>
